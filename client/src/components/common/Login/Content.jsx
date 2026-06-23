@@ -206,7 +206,7 @@ const Content = React.memo(() => {
               <Header
                 as="h1"
                 textAlign="center"
-                content="Clinical Flow"
+                content="Aura Clinical Flow"
                 className={styles.formTitle}
               />
               <Header
