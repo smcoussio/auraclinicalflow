@@ -9,6 +9,7 @@ import request from '../request';
 import selectors from '../../../selectors';
 import actions from '../../../actions';
 import api from '../../../api';
+import playNotificationSound from '../../../utils/playNotificationSound';
 
 export function* deleteAllNotifications() {
   yield put(actions.deleteAllNotifications());
@@ -36,6 +37,8 @@ export function* handleNotificationCreate(notification, users) {
       /* empty */
     }
   } else {
+    playNotificationSound();
+
     yield put(actions.handleNotificationCreate(notification, users));
   }
 }
